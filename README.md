@@ -14,8 +14,11 @@ In this lab, the Wazuh architecture is broken down into three core layers:
 ```text
 wazuh-distributed-lab/
 ├── docs/
-│   ├── 01-wazuh-indexer.mdtext
+│   ├── 01-wazuh-indexer.md
 │   ├── 02-wazuh-server.md
 │   └── 03-wazuh-dashboard.md
 └── assets/
-    └── screenshots/ 
+    └── screenshots/
+            ├── 📂 wazuh-indexer/
+            ├── 📂 wazuh-server/
+            └── 📂 wazuh-dashboard/
