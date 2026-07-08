@@ -1,0 +1,49 @@
+# ====================================================================
+# Wazuh Distributed Lab - GitIgnore
+# Target: Security-by-Design enforcement (No credential/cert leaks)
+# ====================================================================
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Wazuh Certificates & Security Sensitive Files
+# Never commit actual production/lab certificates, private keys or root CA
+*.pem
+*.key
+*.csr
+*.crt
+*.p12
+*.pfx
+*.tar
+*.tar.gz
+*.zip
+*.tgz
+
+# Specific Wazuh Certs Folder backups (from wazuh-certs-tool.sh)
+wazuh-certificates/
+wazuh-certificates.tar
+
+# Credentials, Keystores, and Backups
+# Protects your script-generated passwords and backup dumps
+*internalusers-backup/
+*.old
+*.bak
+config/certificates/
+scripts/password-management/generated_passwords.txt
+
+# Text editor / IDE configurations
+.vscode/
+.idea/
+
+# Python Virtual Environments & Cache (if you expand automation scripts)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
