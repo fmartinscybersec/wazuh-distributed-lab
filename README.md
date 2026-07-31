@@ -1,7 +1,5 @@
 # Wazuh Distributed Architecture Lab
 
----
-
 ## Project Status
 
 ```text
@@ -11,17 +9,18 @@ The core installation guides are already available.
 
 The remaining documentation, Proof of Concepts (PoCs), and additional examples are currently being written and will be published progressively.
 ```
+
 ---
 
 A comprehensive, production-ready lab that demonstrates how to deploy a **distributed Wazuh SIEM/XDR environment** by separating the **Indexer**, **Server**, and **Dashboard** into dedicated virtual machines.
 
 Unlike most tutorials that rely on an **All-in-One** deployment, this project follows a **multi-node architecture**, providing a realistic environment for learning how Wazuh is deployed in enterprise Security Operations Centers (SOCs).
 
-The repository includes step-by-step installation guides, configuration examples, and practical Proof of Concept (POC) scenarios to validate detection and response capabilities.
+The repository includes step-by-step installation guides, configuration examples, maintenance procedures, and practical Proof of Concept (POC) scenarios to validate detection and response capabilities.
 
 ---
 
-# Project Goals
+## Project Goals
 
 This project aims to help students, cybersecurity professionals, and SOC analysts understand how to deploy and manage a distributed Wazuh environment.
 
@@ -35,7 +34,7 @@ The objectives include:
 
 ---
 
-# Architecture Overview
+## Architecture Overview
 
 The laboratory is composed of three independent components:
 
@@ -47,41 +46,40 @@ The laboratory is composed of three independent components:
 
 ---
 
-# Documentation
+## Documentation
 
 Follow the documentation in the order below.
 
-| Step | Documentation |
-|------|---------------|
-| 01 | Wazuh Indexer |
-| 02 | Wazuh Server |
-| 03 | Wazuh Dashboard |
-| 04 | Password Management |
-| 05 | Create Admin Users |
-| 06 | Apply Patch 4.14.6 *(Optional)* |
-| 07 | Agent Authentication |
-| 08 | Remove Agent |
-| 09 | Generate API Token |
+| Step | Guide | Status |
+|------|-------|:------:|
+| 01 | [Wazuh Indexer](docs/01-wazuh-indexer.md) | Completed |
+| 02 | [Wazuh Server](docs/02-wazuh-server.md) | Completed |
+| 03 | [Wazuh Dashboard](docs/03-wazuh-dashboard.md) | Completed |
+| 04 | [Password Management](docs/04-password-management.md) | Completed |
+| 05 | [Administrator Users](docs/05-admin-users.md) | Completed |
+| 06 | [Apply Patch](docs/06-apply-patch.md) | Completed |
+| 07 | [Agent Authentication](docs/07-agent-authentication.md) | WIP |
+| 08 | [Remove Agent](docs/08-remove-agent.md) | WIP |
+| 09 | [Generate API Token](docs/09-api-token.md) | WIP |
 
 
-> **Note:** Step **06 – Apply Patch 4.14.6** is **optional** and only applies to existing Wazuh deployments that require an upgrade to version **4.14.6**. It is **not required** for a clean installation.
+> **Note:** Step **06 – Apply Patch** is **optional** and only applies to existing Wazuh deployments that require an upgrade to **new version**. It is **not required** for a clean installation.
 
 ---
 
-# Proof of Concepts
+## Proof of Concepts
 
 After completing the installation, the following practical scenarios can be used to validate the deployment.
 
-| POC | Description |
-|-----|-------------|
-| 01 | Blocking a Known Malicious Actor |
-| 02 | File Integrity Monitoring |
-| 03 | Detecting a Brute-Force Attack |
-| 04 | Detecting Unauthorized Processes |
-
+| PoC | Guide | Status |
+|-----|-------|:------:|
+| 01 | [Blocking a Known Malicious Actor](poc/01-block-known-malicious-actor.md) | WIP |
+| 02 | [File Integrity Monitoring](poc/02-file-integrity-monitoring.md) | WIP |
+| 03 | [Detecting a Brute-Force Attack](poc/03-brute-force-detection.md) | WIP |
+| 04 | [Detecting Unauthorized Processes](poc/04-unauthorized-processes.md) | WIP |
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```text
 wazuh-distributed-lab/
@@ -126,7 +124,7 @@ wazuh-distributed-lab/
 
 ---
 
-# Lab Environment
+## Lab Environment
 
 This project was developed using:
 
@@ -140,7 +138,7 @@ This project was developed using:
 
 ---
 
-# Screenshots
+## Screenshots
 
 Each document contains its own screenshots.
 
@@ -154,7 +152,7 @@ Each documentation chapter and Proof of Concept has its own dedicated folder to 
 
 ---
 
-# License
+## License
 
 This project is distributed under the **MIT License**.
 
