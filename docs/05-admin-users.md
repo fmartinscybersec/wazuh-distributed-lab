@@ -129,6 +129,6 @@ sudo systemctl status wazuh-dashboard
 
 # Next Step
 
-Continue with the Wazuh 4.14.6 patch installation.
+Continue with the Wazuh patch installation.
 
-[06 - Apply Wazuh 4.14.6 Patch](06-apply-patch.md)
+[06 - Apply Patch](06-apply-patch.md)

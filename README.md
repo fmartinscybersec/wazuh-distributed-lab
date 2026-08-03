@@ -58,9 +58,9 @@ Follow the documentation in the order below.
 | 04 | [Password Management](docs/04-password-management.md) | Completed |
 | 05 | [Administrator Users](docs/05-admin-users.md) | Completed |
 | 06 | [Apply Patch](docs/06-apply-patch.md) | Completed |
-| 07 | [Agent Authentication](docs/07-agent-authentication.md) | WIP |
-| 08 | [Remove Agent](docs/08-remove-agent.md) | WIP |
-| 09 | [Generate API Token](docs/09-api-token.md) | WIP |
+| 07 | [Agent Authentication](docs/07-agent-authentication.md) | Completed |
+| 08 | [Remove Agent](docs/08-remove-agent.md) | Completed |
+| 09 | [Generate API Token](docs/09-api-token.md) | Completed |
 
 
 > **Note:** Step **06 – Apply Patch** is **optional** and only applies to existing Wazuh deployments that require an upgrade to **new version**. It is **not required** for a clean installation.
@@ -77,6 +77,10 @@ After completing the installation, the following practical scenarios can be used
 | 02 | [File Integrity Monitoring](poc/02-file-integrity-monitoring.md) | WIP |
 | 03 | [Detecting a Brute-Force Attack](poc/03-brute-force-detection.md) | WIP |
 | 04 | [Detecting Unauthorized Processes](poc/04-unauthorized-processes.md) | WIP |
+| 05 | [Network IDS Integration](poc/05-network-ids-integration.md) | WIP |
+| 06 | [Detecting an SQL Injection Attack](poc/06-detecting-an-sql-injection-attack.md) | WIP |
+| 07 | [Detecting Suspicious Binaries](poc/07-detecting-suspicious-binaries.md) | WIP |
+| 08 | [Detecting and Removing Malware Using VirusTotal](poc/08-detecting-and-removing-malware-using-virustotal-integration.md) | WIP |
 ---
 
 ## Repository Structure
@@ -103,7 +107,11 @@ wazuh-distributed-lab/
 │   ├── 01-block-known-malicious-actor.md
 │   ├── 02-file-integrity-monitoring.md
 │   ├── 03-brute-force-detection.md
-│   └── 04-unauthorized-processes.md
+│   ├── 04-unauthorized-processes.md
+│   ├── 05-network-ids-integration.md
+│   ├── 06-detecting-an-sql-injection-attack.md
+│   ├── 07-detecting-suspicious-binaries.md
+│   └── 08-detecting-and-removing-malware-using-virustotal-integration.md
 │
 └── assets/
     └── screenshots/
@@ -119,7 +127,11 @@ wazuh-distributed-lab/
         ├── poc-01-block-known-malicious-actor/
         ├── poc-02-file-integrity-monitoring/
         ├── poc-03-brute-force-detection/
-        └── poc-04-unauthorized-processes/
+        ├── poc-04-unauthorized-processes/
+        ├── poc-05-network-ids-integration/
+        ├── poc-06-detecting-an-sql-injection-attack/
+        ├── poc-07-detecting-suspicious-binaries/
+        └── poc-08-detecting-and-removing-malware-using-virustotal/
 ```
 
 ---
