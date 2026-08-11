@@ -73,10 +73,10 @@ After completing the installation, the following practical scenarios can be used
 
 | PoC | Guide | Status |
 |-----|-------|:------:|
-| 01 | [Blocking a Known Malicious Actor](poc/01-block-known-malicious-actor.md) | WIP |
-| 02 | [File Integrity Monitoring](poc/02-file-integrity-monitoring.md) | WIP |
-| 03 | [Detecting a Brute-Force Attack](poc/03-brute-force-detection.md) | WIP |
-| 04 | [Detecting Unauthorized Processes](poc/04-unauthorized-processes.md) | WIP |
+| 01 | [Blocking a Known Malicious Actor](poc/01-block-known-malicious-actor.md) | Completed |
+| 02 | [File Integrity Monitoring](poc/02-file-integrity-monitoring.md) | Completed |
+| 03 | [Detecting a Brute-Force Attack](poc/03-brute-force-detection.md) | Completed |
+| 04 | [Detecting Unauthorized Processes](poc/04-unauthorized-processes.md) | Completed |
 | 05 | [Network IDS Integration](poc/05-network-ids-integration.md) | WIP |
 | 06 | [Detecting an SQL Injection Attack](poc/06-detecting-an-sql-injection-attack.md) | WIP |
 | 07 | [Detecting Suspicious Binaries](poc/07-detecting-suspicious-binaries.md) | WIP |
