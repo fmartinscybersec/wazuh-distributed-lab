@@ -7,7 +7,7 @@ Status: Work in Progress (WIP)
 
 The core installation guides are already available.
 
-The remaining documentation, Proof of Concepts (PoCs), and additional examples are currently being written and will be published progressively.
+Additional documentation, detection engineering scenarios, integrations, and practical examples will be added progressively.
 ```
 
 ---
@@ -71,16 +71,17 @@ Follow the documentation in the order below.
 
 After completing the installation, the following practical scenarios can be used to validate the deployment.
 
-| PoC | Guide | Status |
-|-----|-------|:------:|
-| 01 | [Blocking a Known Malicious Actor](poc/01-block-known-malicious-actor.md) | Completed |
-| 02 | [File Integrity Monitoring](poc/02-file-integrity-monitoring.md) | Completed |
-| 03 | [Detecting a Brute-Force Attack](poc/03-brute-force-detection.md) | Completed |
-| 04 | [Detecting Unauthorized Processes](poc/04-unauthorized-processes.md) | Completed |
-| 05 | [Network IDS Integration](poc/05-network-ids-integration.md) | WIP |
-| 06 | [Detecting an SQL Injection Attack](poc/06-detecting-an-sql-injection-attack.md) | WIP |
-| 07 | [Detecting Suspicious Binaries](poc/07-detecting-suspicious-binaries.md) | WIP |
-| 08 | [Detecting and Removing Malware Using VirusTotal](poc/08-detecting-and-removing-malware-using-virustotal-integration.md) | WIP |
+| PoC | Guide                                                                                                                    | Status |
+|-----|--------------------------------------------------------------------------------------------------------------------------|:------:|
+| 01  | [Blocking a Known Malicious Actor](poc/01-block-known-malicious-actor.md)                                                | Completed |
+| 02  | [File Integrity Monitoring](poc/02-file-integrity-monitoring.md)                                                         | Completed |
+| 03  | [Detecting a Brute-Force Attack](poc/03-brute-force-detection.md)                                                        | Completed |
+| 04  | [Detecting Unauthorized Processes](poc/04-unauthorized-processes.md)                                                     | Completed |
+| 05  | [Network IDS Integration](poc/05-network-ids-integration.md)                                                             | Completed |
+| 06  | [Detecting an SQL Injection Attack](poc/06-detecting-an-sql-injection-attack.md)                                         | Completed |
+| 07  | [Detecting Suspicious Binaries](poc/07-detecting-suspicious-binaries.md)                                                 | Completed |
+| 08  | [Detecting and Removing Malware Using VirusTotal](poc/08-detecting-and-removing-malware-using-virustotal-integration.md) | Completed |
+| 09  | [Vulnerability Detection](poc/09-vulnerability-detection.md)                                                             | Completed |
 ---
 
 ## Repository Structure
@@ -98,7 +99,7 @@ wazuh-distributed-lab/
 │   ├── 03-wazuh-dashboard.md
 │   ├── 04-password-management.md
 │   ├── 05-admin-users.md
-│   ├── 06-apply-patch-4.14.6.md
+│   ├── 06-apply-patch.md
 │   ├── 07-agent-authentication.md
 │   ├── 08-remove-agent.md
 │   └── 09-api-token.md
@@ -111,7 +112,8 @@ wazuh-distributed-lab/
 │   ├── 05-network-ids-integration.md
 │   ├── 06-detecting-an-sql-injection-attack.md
 │   ├── 07-detecting-suspicious-binaries.md
-│   └── 08-detecting-and-removing-malware-using-virustotal-integration.md
+│   ├── 08-detecting-and-removing-malware-using-virustotal-integration.md
+│   └── 09-vulnerability-detection.md
 │
 └── assets/
     └── screenshots/
@@ -120,7 +122,7 @@ wazuh-distributed-lab/
         ├── 03-wazuh-dashboard/
         ├── 04-password-management/
         ├── 05-admin-users/
-        ├── 06-apply-patch-4.14.6/
+        ├── 06-apply-patch/
         ├── 07-agent-authentication/
         ├── 08-remove-agent/
         ├── 09-api-token/
@@ -131,7 +133,8 @@ wazuh-distributed-lab/
         ├── poc-05-network-ids-integration/
         ├── poc-06-detecting-an-sql-injection-attack/
         ├── poc-07-detecting-suspicious-binaries/
-        └── poc-08-detecting-and-removing-malware-using-virustotal/
+        ├── poc-08-detecting-and-removing-malware-using-virustotal-integration/
+        └── poc-09-vulnerability-detection/
 ```
 
 ---
