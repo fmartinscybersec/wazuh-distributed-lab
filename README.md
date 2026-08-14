@@ -82,6 +82,7 @@ After completing the installation, the following practical scenarios can be used
 | 07  | [Detecting Suspicious Binaries](poc/07-detecting-suspicious-binaries.md)                                                 | Completed |
 | 08  | [Detecting and Removing Malware Using VirusTotal](poc/08-detecting-and-removing-malware-using-virustotal-integration.md) | Completed |
 | 09  | [Vulnerability Detection](poc/09-vulnerability-detection.md)                                                             | Completed |
+| 10  | [Detecting malware using YARA integration](poc/10-detecting-malware-using-yara-integration.md)                           | Completed |
 ---
 
 ## Repository Structure
@@ -113,7 +114,8 @@ wazuh-distributed-lab/
 │   ├── 06-detecting-an-sql-injection-attack.md
 │   ├── 07-detecting-suspicious-binaries.md
 │   ├── 08-detecting-and-removing-malware-using-virustotal-integration.md
-│   └── 09-vulnerability-detection.md
+│   ├── 09-vulnerability-detection.md
+│   └── 10-detecting-malware-using-yara-integration.md
 │
 └── assets/
     └── screenshots/
@@ -134,7 +136,8 @@ wazuh-distributed-lab/
         ├── poc-06-detecting-an-sql-injection-attack/
         ├── poc-07-detecting-suspicious-binaries/
         ├── poc-08-detecting-and-removing-malware-using-virustotal-integration/
-        └── poc-09-vulnerability-detection/
+        ├── poc-09-vulnerability-detection/
+        └── poc-10-detecting-malware-using-yara-integration/
 ```
 
 ---
