@@ -18,8 +18,9 @@
 12. Update the Wazuh Dashboard
 13. Disable Future Updates
 14. Verify the Installed Version
-15. Update Windows Agent
-16. Update Linux Agent
+15.  Update Wazuh Agents
+16.  Mass Update Wazuh Agents
+17.  Verify Agent Versions
 
 ---
 
@@ -444,3 +445,144 @@ sudo apt list --installed wazuh-dashboard
 ```
 ![Verify the Installed Version](../assets/screenshots/06-apply-patch/22.png)
 ![Verify the Installed Version on Dashboard](../assets/screenshots/06-apply-patch/23.png)
+
+---
+
+## 15 - Update Wazuh Agents
+
+> [!NOTE]
+> **Version-specific commands:**  
+> The commands and API requests in this guide are specific to the Wazuh version documented here. Before performing a future upgrade, verify the target Wazuh version and consult the corresponding official Wazuh documentation. Do not blindly reuse the commands shown in this guide, as package names, repository URLs, API parameters, or upgrade procedures may change between versions.
+
+Wazuh agents can be updated individually or in bulk.
+
+### Windows Agent
+
+Download the Wazuh Agent installer for version **4.14.6** from the official Wazuh repository.
+
+Open PowerShell and navigate to the directory containing the installer.
+
+```powershell
+cd $env:USERPROFILE\Downloads
+```
+
+Run the installer silently.
+
+```powershell
+.\wazuh-agent-4.14.6-1.msi /q
+```
+![Windows agent upgrade](../assets/screenshots/06-apply-patch/24.png)
+
+### Linux Agent
+
+Import the Wazuh GPG key.
+
+```bash
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && sudo chmod 644 /usr/share/keyrings/wazuh.gpg
+```
+
+Add the Wazuh repository.
+
+```bash
+echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/stable main" | sudo tee -a /etc/apt/sources.list.d/wazuh.list
+```
+
+Update the package list.
+
+```bash
+sudo apt-get update
+```
+
+Install the Wazuh Agent update.
+
+```bash
+sudo apt-get install wazuh-agent
+```
+
+Disable the Wazuh repository again to prevent future automatic updates.
+
+```bash
+sed -i "s/^deb/#deb/" /etc/apt/sources.list.d/wazuh.list
+```
+
+Update the package list.
+
+```bash
+sudo apt-get update
+```
+
+---
+
+## 16 - Mass Update Wazuh Agents
+
+The Wazuh Dashboard can be used to perform a mass upgrade of connected agents.
+
+Before starting the upgrade, verify that the agents are online.
+
+![Agents Online](../assets/screenshots/06-apply-patch/25.png)
+
+Navigate to:
+
+```text
+Wazuh Dashboard
+→ Server Management
+→ Dev Tools
+```
+
+![Navigate to Wazuh Dashboard Server Management and Dev Tools](../assets/screenshots/06-apply-patch/26.png)
+
+### Test the Agent Upgrade
+
+Before upgrading all agents, perform a test upgrade against a single agent.
+
+In Dev Tools, enter the following request:
+
+```text
+PUT /agents/upgrade?agents_list=001&upgrade_version=v4.14.7&package_type=deb
+```
+
+Execute the request and verify that the response contains:
+
+```text
+All upgrade tasks were created
+```
+
+![Successful upgrade task creation for agent 001](../assets/screenshots/06-apply-patch/27.png)
+
+After the upgrade task has been created, return to the agent list and verify that agent 001 has been successfully updated.
+
+![Verify that agent 001 has been successfully updated](../assets/screenshots/06-apply-patch/28.png)
+
+### Upgrade All Agents
+
+Once the individual agent upgrade has been successfully validated, upgrade all agents.
+
+In Dev Tools, execute:
+
+```text
+PUT /agents/upgrade?agents_list=all&upgrade_version=v4.14.7
+```
+
+If some agents fail to upgrade because the required WPK package is unavailable, specify the package type explicitly:
+
+```text
+PUT /agents/upgrade?agents_list=all&upgrade_version=v4.14.7&package_type=deb
+```
+
+![Upgrade all agents](../assets/screenshots/06-apply-patch/29.png)
+
+---
+
+## 17 - Verify Agent Versions
+
+After the upgrade tasks have completed, return to the Wazuh agent list.
+
+Verify that all agents are:
+
+- Online
+- Active
+- Running the expected Wazuh Agent version
+- Successfully connected to the Wazuh Server
+
+
+![Agent list](../assets/screenshots/06-apply-patch/30.png)
