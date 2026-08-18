@@ -135,6 +135,11 @@ Remove the conversion script.
 sudo rm -rf /tmp/iplist-to-cdblist.py
 ```
 
+Assign the correct ownership to the generated blacklist file.
+```bash
+sudo chown wazuh:wazuh /var/ossec/etc/lists/blacklist-alienvault
+```
+
 ---
 
 ## 3 - Create the Active Response Rule
