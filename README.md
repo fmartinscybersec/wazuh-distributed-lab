@@ -170,6 +170,28 @@ Each documentation chapter and Proof of Concept has its own dedicated folder to 
 
 ---
 
+## Documentation Sources and Attribution
+
+The installation guides, configuration procedures, and technical references in this repository are based on the official [Wazuh documentation](https://documentation.wazuh.com/) and resources published on the [Wazuh website](https://wazuh.com/).
+
+The documentation has been organized into step-by-step guides to make the deployment, configuration, and management of a distributed Wazuh environment easier to understand.
+
+The repository also includes practical Proof of Concept (PoC) scenarios, configuration examples, and validation procedures developed to demonstrate Wazuh detection and response capabilities in a laboratory environment.
+
+**Official Wazuh resources:**
+
+- [Wazuh Official Website](https://wazuh.com/)
+- [Wazuh Documentation](https://documentation.wazuh.com/)
+- [Wazuh Installation Guide](https://documentation.wazuh.com/current/installation-guide/index.html)
+- [Wazuh Ruleset Documentation](https://documentation.wazuh.com/current/user-manual/ruleset/index.html)
+- [Wazuh API Reference](https://documentation.wazuh.com/current/user-manual/api/index.html)
+
+Wazuh is an open-source security platform. All Wazuh trademarks and product names belong to their respective owners.
+
+This repository is an independent educational project. It is not an official Wazuh project and is not affiliated with or endorsed by Wazuh, Inc.
+
+---
+
 ## License
 
 This project is distributed under the **MIT License**.
